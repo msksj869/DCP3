@@ -16,7 +16,7 @@ db.once('open', function(){
     console.log("Connected to mongod server");
 });
 
-mongoose.connect('mongodb://localhost/mongodb_tutorial');
+mongoose.connect(`mongodb://${process.env.DB_HOST}/mongodb_tutorial`);
 
 // DEFINE MODEL
 var Book = require('./models/book');

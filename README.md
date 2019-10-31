@@ -1,11 +1,12 @@
-## RESTful API using MongoDB & Mongoose & Express
-VELOPERT 블로그에 작성한 강좌에 사용된 프로젝트 입니다.  
-MongoDB, Mongoose 와 Express 를 사용하여 간단한 RESTful API 를 구현합니다.  
+## 데이터센터프로그래밍 2차 과제
 
+아래 포스팅 글의 서비스를 Dockerization 하였습니다.
 
+https://velopert.com/594
+
+### 실행
 ```
-$ npm install
-$ node app.js
+$ docker-compose up -d
 ```
 
 ### API 목록
@@ -17,7 +18,3 @@ $ node app.js
 | /api/books                | POST   | book 데이터 생성          |
 | /api/books/:book_id       | PUT    | book 데이터 수정          |
 | /api/books/:book_id       | DELETE | book 데이터 제거          |
-
-링크: https://velopert.com/594
-
-psuh
