@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app:
+    image: ksh970/book_app
+    build: ./book_app
+    ports:
+      - "80:8080"
+    depends_on:
+      - mongo
+    environment:
+      DB_HOST: mongo
+    deploy:
+      replicas: 2     
+  mongo:
+    image: mongo
+    volumes:
+      - db-data:/data/db
+    ports:
+      - "27017:27017"
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]      
+
+volumes:
+  db-data:
